@@ -81,12 +81,18 @@ main {
     justify-content: center;
     align-items: center;
     margin-bottom: 2rem;
+    max-width: 500px;
+    max-height: 350px;
+    overflow: hidden;
+    
 }
 
 .meme img {
     max-width: 100%;
     height: auto;
     border-radius: 9px;
+    object-fit: cover;
+    display: block;
 }
 
 .meme span {

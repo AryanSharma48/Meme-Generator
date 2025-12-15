@@ -3,8 +3,8 @@ import { useState,useEffect, use } from "react"
 export default function Main(){
 
     const [ meme , setMeme ] = useState({
-        topText : "Walk into Mordor",
-        bottomText : "One does not simply" ,
+        topText : "One does not simply",
+        bottomText : "Walk into Mondor" ,
         imageUrl : "http://i.imgflip.com/1bij.jpg"
     })
 
@@ -23,6 +23,19 @@ export default function Main(){
             .then(res => res.json())
             .then(data => setAllMemes(data.data.memes))
     },[])
+
+    console.log(allMemes)
+
+    function randomImage(){
+        const randomIndex = Math.floor(Math.random() * allMemes.length)
+        const newMemeUrl = allMemes[randomIndex].url        
+        setMeme(prevMeme => ({
+            ...prevMeme,
+            imageUrl : newMemeUrl
+        }))
+        
+    }
+
 
     return(
         <main>
@@ -52,7 +65,7 @@ export default function Main(){
                         value={meme.bottomText}
                     />
                 </label>
-                <button>Get a new meme image !</button>
+                <button onClick={randomImage}>Get a new meme image !</button>
             </div>
             
         </main>
