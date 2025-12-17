@@ -1,4 +1,4 @@
-# 🎨 Meme Generator
+# Meme Generator
 
 A simple and interactive **Meme Generator** built with **React**, focused on practicing core React concepts like hooks, API handling, and responsive UI design.
 
@@ -49,12 +49,12 @@ This project was built to:
 
 Clone the repository and run it locally:
 
-
+```
 git clone https://github.com/AryanSharma48/Meme-Generator.git
 cd Meme-Generator
 npm install
 npm run dev
-
+```
 
 ---
 
@@ -64,11 +64,10 @@ This project is deployed using **GitHub Pages**.
 
 To deploy manually:
 
-
+```
 npm run build
 npm run deploy
-
-
+```
 ---
 
 ## 🔮 Future Improvements
